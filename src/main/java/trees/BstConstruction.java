@@ -14,14 +14,14 @@ public class BstConstruction {
             if (value < this.value) {
                 if (left == null) {
                     BST newBst = new BST(value);
-                    left=newBst;
+                    left = newBst;
                 } else {
                     left.insert(value);
                 }
             } else {
                 if (right == null) {
                     BST newBst = new BST(value);
-                    right=newBst;
+                    right = newBst;
                 } else {
                     right.insert(value);
                 }
@@ -51,7 +51,7 @@ public class BstConstruction {
         }
 
         public BST remove(int value) {
-            return remove(value, this);
+            return remove(value, null);
         }
 
         private BST remove(int value, BST parent) {
