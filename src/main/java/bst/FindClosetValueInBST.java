@@ -1,4 +1,4 @@
-package trees;
+package bst;
 
 public class FindClosetValueInBST {
     public static int findClosestValueInBst(BST tree, int target) {

@@ -1,6 +1,6 @@
 import org.junit.Assert;
 import org.junit.Test;
-import trees.FindClosetValueInBST;
+import bst.FindClosetValueInBST;
 
 public class FindClosetValueInBstTest {
     @Test

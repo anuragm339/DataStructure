@@ -1,4 +1,4 @@
-package trees;
+package bst;
 
 public class ValidateBst {
     public static boolean validateBst(BST tree) {
@@ -16,7 +16,7 @@ public class ValidateBst {
         if(tree.left!=null && !isBSTUtil(tree.left,min,tree.value)){
             return false;
         }
-        if(tree.right!=null && !isBSTUtil(tree.right,min,tree.value)){
+        if(tree.right!=null && !isBSTUtil(tree.right,tree.value,max)){
             return false;
         }
 
@@ -24,7 +24,7 @@ public class ValidateBst {
     }
 
 
-    static class BST {
+   public static class BST {
         public int value;
         public BST left;
         public BST right;

@@ -1,5 +1,5 @@
 import org.junit.Test;
-import trees.BstConstruction;
+import bst.BstConstruction;
 
 import static org.junit.Assert.assertTrue;
 

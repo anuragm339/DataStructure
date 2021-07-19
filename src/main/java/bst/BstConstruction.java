@@ -1,4 +1,4 @@
-package trees;
+package bst;
 
 public class BstConstruction {
     public static class BST {
