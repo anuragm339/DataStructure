@@ -1,6 +1,7 @@
 package bst;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ReconstructBst {
 
@@ -13,7 +14,7 @@ public class ReconstructBst {
             this.value = value;
         }
     }
-    public BST reconstructBst(ArrayList<Integer> preOrderTraversalValues) {
+    public BST reconstructBst(List<Integer> preOrderTraversalValues) {
         if (preOrderTraversalValues.size() == 0){
             return null;
         }
@@ -27,8 +28,8 @@ public class ReconstructBst {
                 break;
             }
         }
-        BST leftSubtree = reconstructBst((ArrayList<Integer>) preOrderTraversalValues.subList(1, rightSubtreeRootIdx));
-        BST rightSubtree =reconstructBst((ArrayList<Integer>) preOrderTraversalValues.subList(rightSubtreeRootIdx, preOrderTraversalValues.size()));
+        BST leftSubtree = reconstructBst(preOrderTraversalValues.subList(1, rightSubtreeRootIdx));
+        BST rightSubtree =reconstructBst(preOrderTraversalValues.subList(rightSubtreeRootIdx, preOrderTraversalValues.size()));
         BST bst = new BST(currentValue);
         bst.left = leftSubtree;
         bst.right = rightSubtree;
