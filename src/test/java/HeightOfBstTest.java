@@ -10,9 +10,10 @@ public class HeightOfBstTest {
         root.left=new HeightOfBst.BST(8);
         root.right=new HeightOfBst.BST(9);
         root.left.left=new HeightOfBst.BST(5);
-        root.left.right = new HeightOfBst.BST(7);
+       // root.left.right = new HeightOfBst.BST(7);
         HeightOfBst height= new HeightOfBst();
-        int height1 = height.height(root);
-        assertEquals(3,height1);
+        int height1 = height.height(root,0);
+        assertEquals(2,height1);
+
     }
 }

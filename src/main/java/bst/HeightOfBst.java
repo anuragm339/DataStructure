@@ -27,17 +27,18 @@ public class HeightOfBst {
             return this;
         }
     }
-    public int height(BST tree){
+    int leftHeight=0;
+    int rightHeight=0;
+    public int height(BST tree,int x){
         if(tree==null){
-            return 0;
+            return x;
         }
-        int leftHeight=height(tree.left);
-        int rightHeight=height(tree.right);
-        if(leftHeight>rightHeight){
-            return leftHeight+1;
-        }else{
-            return rightHeight+1;
+        if(tree.left!=null) {
+            leftHeight = height(tree.left, x + 1);
+        } if(tree.right!=null) {
+            rightHeight  = height(tree.right, x + 1);
         }
+        return Math.max(leftHeight,rightHeight);
 
     }
 }
